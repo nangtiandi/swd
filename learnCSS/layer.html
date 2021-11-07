@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .home{
+            width: 100%;
+            height: 100vh;
+            background-image: url(../img/img01.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+            backdrop-filter: blur(15);
+            opacity: .9;
+        }
+        .home::after{
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            /* background-color: hotpink; */
+            background-image: linear-gradient(67.5deg, rgb(95, 27, 43) 0%, rgb(95, 27, 43) 21%,rgb(109, 47, 38) 21%, rgb(109, 47, 38) 28%,rgb(123, 66, 32) 28%, rgb(123, 66, 32) 32%,rgb(137, 86, 27) 32%, rgb(137, 86, 27) 41%,rgb(152, 105, 22) 41%, rgb(152, 105, 22) 48%,rgb(166, 125, 17) 48%, rgb(166, 125, 17) 69%,rgb(180, 144, 11) 69%, rgb(180, 144, 11) 93%,rgb(194, 164, 6) 93%, rgb(194, 164, 6) 100%),linear-gradient(45deg, rgb(95, 27, 43) 0%, rgb(95, 27, 43) 21%,rgb(109, 47, 38) 21%, rgb(109, 47, 38) 28%,rgb(123, 66, 32) 28%, rgb(123, 66, 32) 32%,rgb(137, 86, 27) 32%, rgb(137, 86, 27) 41%,rgb(152, 105, 22) 41%, rgb(152, 105, 22) 48%,rgb(166, 125, 17) 48%, rgb(166, 125, 17) 69%,rgb(180, 144, 11) 69%, rgb(180, 144, 11) 93%,rgb(194, 164, 6) 93%, rgb(194, 164, 6) 100%),linear-gradient(112.5deg, rgb(95, 27, 43) 0%, rgb(95, 27, 43) 21%,rgb(109, 47, 38) 21%, rgb(109, 47, 38) 28%,rgb(123, 66, 32) 28%, rgb(123, 66, 32) 32%,rgb(137, 86, 27) 32%, rgb(137, 86, 27) 41%,rgb(152, 105, 22) 41%, rgb(152, 105, 22) 48%,rgb(166, 125, 17) 48%, rgb(166, 125, 17) 69%,rgb(180, 144, 11) 69%, rgb(180, 144, 11) 93%,rgb(194, 164, 6) 93%, rgb(194, 164, 6) 100%),linear-gradient(90deg, rgb(173, 64, 191),rgb(42, 31, 17)); background-blend-mode:overlay,overlay,overlay,normal;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .8;
+            z-index: 10;
+        }
+        .home-text{
+            width: 450px;
+            color: #fff;
+            z-index: 100;
+        }
+        .home-text .home-text-title{
+            font-size: 2em;
+            word-spacing: 2px;
+        }
+        .home-text .home-text-para{
+            letter-spacing: 1px;
+            line-height: 20px;
+        }
+        .about{
+            height: 100vh;
+        }
+        .about:nth-child(even){
+            background-color: lavender;
+        }
+        .up{
+            width: 40px;
+            height: 40px;
+            background: #5EC2BB;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <section class="home" id="home">
+        <div class="home-text">
+            <h2 class="home-text-title">DJ Remark Go!</h2>
+            <p class="home-text-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil doloribus reprehenderit, voluptatem mollitia tempora corporis, vitae, excepturi facilis laudantium dolor iste optio deserunt? Perferendis molestias non exercitationem qui unde fugit!</p>
+        </div>
+    </section>
+    <a href="#home" class="up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="up-icon"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg>
+    </a>
+    <section class="about"></section>
+    <section class="about"></section>
+   
+</body>
+</html>

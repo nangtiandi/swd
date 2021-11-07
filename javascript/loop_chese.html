@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chese Loop</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    tr,td{
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+    }
+    .dark{
+        background-color: black;
+    }
+    .grey{
+        background-color: whitesmoke;
+    }
+</style>
+<body>
+    <table>
+        <tbody id="tbody"></tbody>
+    </table>
+    <script>
+        let tbody = document.querySelector('#tbody');
+        for(let i=1; i<=8; i++){
+            // row
+            let td = "";
+            if(i%2 == 0){
+                for(let x=1; x<=8; x++){
+                // col
+                if(x%2 ==0){
+                    td +="<td class='grey'></td>";
+                }else{
+                    td +="<td class='dark'></td>";
+                }
+            }
+            }else{
+                for(let x=1; x<=8; x++){
+                // col
+                if(x%2 ==0){
+                    td +="<td class='dark'></td>";
+                }else{
+                    td +="<td class='grey'></td>";
+                }
+            }
+            }
+            
+            tbody.innerHTML += "<tr>"+td+"</tr>";
+        }
+    </script>
+</body>
+</html>

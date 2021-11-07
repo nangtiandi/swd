@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation </title>
+    <style>
+        .container{
+            width: 600px;
+            height: 500px;
+            background-image: url(img/bg.jpg);
+            /* background-color: grey; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .rs{
+            position: absolute;
+            bottom: 200px;
+            left: 130px;
+
+        }
+        .boy{
+            width: 120px;
+            padding: 0 15px;
+        }
+        .killer{
+            transform: translateX(500px);
+            animation: toLeft 5s;
+        }
+        .mal{
+            width: 180px;
+            transform: translateX(-500px);
+            animation: toRight 5s;
+        }
+        .knife{
+            width: 80px;
+            position: absolute;
+            bottom: 200px;
+            left: 250px;
+            animation: slice 4s;
+        }
+        .hell{
+            position: absolute;
+            background-image: url(img/thunder.jpeg);
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: hell 8s;
+        }
+        @keyframes slice{
+            0%{
+                bottom: 500px;
+            }
+            25%{
+                bottom: 200px;
+                transform: rotate(0deg);
+            }
+            40%{
+                transform: rotate(65deg);
+            }
+            60%{
+                transform: rotate(0deg);
+            }
+            70%{
+                transform: rotate(65deg);
+            }
+            80%{
+                transform: rotate(0deg);
+            }
+            90%{
+                transform: rotate(65deg);
+            }
+            99%{
+                transform: rotate(0deg);
+                display: none;
+            }
+        }
+        @keyframes toLeft{
+            0%{
+                transform: translateX(0px);
+            }
+            50%{
+                transform: translateX(0px);
+            }
+            80%{
+                transform: translateX(0px);
+            }
+            100%{
+                transform: translateX(-500px);
+            }
+        }
+        @keyframes toRight{
+            0%{
+                transform: translateX(0px);
+            }
+            50%{
+                transform: translateX(0px);
+            }
+            80%{
+                transform: translateX(0px) rotate(90deg);
+            }
+            100%{
+                transform: translateX(500px) rotate(90deg);
+            }
+        }
+        @keyframes hell{
+            0%{
+                bottom: 500px;
+            }
+            50%{
+                bottom: 500px;
+            }
+            100%{
+                bottom: 0px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rs">
+            <img src="img/danger.png" alt="" class="boy killer">
+            <img src="img/mal.png" alt="" class="boy mal">
+        </div>
+        <img src="img/dama.png" alt="" class="knife">
+        <div class="hell">
+            <img src="img/heller.png" alt="">
+            <p>We are waiting you from blah blah....</p>
+        </div>
+    </div>
+</body>
+</html>

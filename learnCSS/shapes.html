@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes </title>
+    <style>
+        div{
+            display: inline-block;
+        }
+        .shape{
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid salmon;
+        }
+        .border-rounded{
+            border-radius: 50px;
+        }
+        .img-box{
+            border-radius: 50px;
+
+        }
+        .triangle{
+            border: 50px solid white;
+            border-bottom-color: deepskyblue;
+            border-top-width: 0px;
+        }
+        .triangle-2{
+            border: 50px solid deepskyblue;
+            border-left-color: #fff;
+            border-top-color: #fff;
+        }
+        .envelope{
+            border: 50px solid lightsteelblue;
+            border-top-color: darkturquoise;
+            border-bottom-width: 10px;
+        }
+        .airplane{
+            width: 150px;
+            height: 80px;
+            background-color: darkturquoise;
+            position: relative;
+        }
+        .airplane::before{
+            content: '';
+            background: #4bced1;
+            position: absolute;
+            border: 40px solid #4bced1;
+            border-left-color: #fff;
+        }
+        .airplane::after{
+            content: '';
+            position: absolute;
+            background: #4bced1;
+            left: 150px;
+            border: 40px solid white;
+            border-left-color: #4bced1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Html, Css Shapes</h1>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <hr>
+    <div class="shape border-rounded"></div>
+    <img src="../img/img05.jpg" alt="" class="shape img-box">
+    <hr>
+    <div class="triangle"></div>
+    <div class="triangle-2"></div>
+    <div class="envelope"></div>
+    <hr>
+    <div class="airplane"></div>
+</body>
+</html>

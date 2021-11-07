@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Project Part 1</title>
+    <style>
+        button{
+            width: 100px;
+            height: 200px;
+            background-color: black;
+            border: none;
+            cursor: pointer;
+        }
+        button:nth-child(even){
+            background-color: white;
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="record">
+    <input type="button" onclick="saveChord()" value="Save">
+    <br><br>
+    <button onclick="key('C4')">C</button>
+    <button onclick="key('D4')">D</button>
+    <button onclick="key('E4')">E</button>
+    <button onclick="key('F4')">F</button>
+    <button onclick="key('G4')">G</button>
+    <button onclick="key('A4')">A</button>
+    <button onclick="key('B4')">B</button>
+    <button onclick="key('C5')">C</button>
+    <ul id="list">
+
+    </ul>
+    <script>
+        let record = document.getElementById('record');
+        let recordMemory = [];
+        let list = document.getElementById('list');
+
+        function key(x){
+            const sound = new Audio(`sound/${x}.mp3`);
+            sound.play();
+            record.value += x+",";
+        }
+        function saveChord(){
+            let input = record.value;
+            recordMemory.push(input);
+            alert(`${input} are saved in memory.`);
+            record.value = "";
+            list.innerHTML = "";
+            recordMemory.map(function(el,index){
+                list.innerHTML += `<li>${el}<input type="button" value="replay" onclick="replay(${index})"></li>`;
+            })
+        }
+        function replay(x){
+            let now = recordMemory[x].split(',');
+            now.pop();
+            start(now);
+        }
+        let keys = ['C4','D4','E4','C4','C4','D4','E4','C4','E4','F4','G4','E4','F4','G4'];
+        function start(arr,delay=1000){
+                let time = delay;
+            arr.map(function (el,index){
+                setTimeout(key,time,el);
+                time +=delay;
+            })
+        }
+
+    </script>
+</body>
+</html>

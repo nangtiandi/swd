@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Reader</title>
+    <style>
+        img{
+            width: 250px;
+            display: block;
+        }
+        #upload{
+            display: none;
+        }
+        #uploader{
+            width: 80px;
+            height: 80px;
+            background-color: rgb(222, 135, 222);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 30px auto;
+        }
+        .upload-img{
+            width: 50px;
+        }
+        #gallery{
+            width: 90%;
+            columns: 3 250px;
+            margin: 15px auto;
+        }
+        .image-box{
+            width: 100%;
+            border-radius: 15px;
+            margin: 15px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="uploader">
+        <img src="../img/upload-file.png" alt="" class="upload-img">
+    </div>
+    <input type="file" id="upload" multiple>
+    <!-- <img src="" alt="" id="preview"> -->
+    <div id="gallery">
+        
+    </div>
+    <script>
+        let upload = document.getElementById('upload');
+        let preview = document.getElementById('preview');
+        let uploader = document.getElementById('uploader');
+        let gallery = document.getElementById('gallery');
+
+        function addGalleryBox(src){
+            let img = new Image();
+            img.src = src;
+            img.classList = "image-box";
+            gallery.appendChild(img);
+        }
+
+        uploader.addEventListener('click',function(){
+            upload.click();
+        })
+        upload.addEventListener('change',function(){
+            let photo = this.files;
+            for(let i=0; i<photo.length; i++){
+                let reader = new FileReader();
+
+                reader.addEventListener('load',function(){
+                    // preview.src = reader.result;
+                    addGalleryBox(reader.result);
+                })
+                reader.readAsDataURL(photo[i]);
+            }
+            
+        })
+    </script>
+</body>
+</html>

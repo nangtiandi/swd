@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New API</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .news{
+            width: 100%;
+            columns: 3 300px;
+            margin: 25px auto;
+        }
+        .card{
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="news">
+        
+    </div>
+    <script src="js/new_api.js"></script>
+    <script>
+        console.log(data);
+        let article = data.articles;
+        let news = document.querySelector('.news');
+        article.map(function(el,index){
+            news.innerHTML +=`
+            <div class="card">
+                    <img src="${el.urlToImage}" alt="">
+                    <h4>${el.title}</h4>
+                    <small>${el.author}</small>
+                    <p>${el.description}</p>
+                    <a href="${el.url}"></a>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

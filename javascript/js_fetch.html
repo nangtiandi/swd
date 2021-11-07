@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Fetch</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #news{
+            width: 80%;
+            margin: 20px auto;
+            columns: 3 250px;
+        }
+        .card{
+            width: 100%;
+        }
+        .card-img{
+            width: 100%;
+        }
+        #connect{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .con-img{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="news">
+        
+    </div>
+    <div id="connect"></div>
+    
+    <script>
+        
+        let connect = document.getElementById("connect");
+        connect.innerHTML = `<img src="../img/Ajux_loader.gif" alt="" class="con-img">`;
+        fetch('https://newsapi.org/v2/everything?q=tesla&from=2021-09-30&sortBy=publishedAt&apiKey=be7aa4655c3e4f1eb8a5d32cb0ca8969')
+        .then(response => response.json())
+        .then(data => {
+            let article = data.articles;
+            let news = document.getElementById("news");
+            connect.innerHTML = "";
+            article.map(function (el,index){
+                console.log(el);
+                news.innerHTML += `
+                <div class="card">
+                    <img src="${el.urlToImage}" alt="" class="card-img">
+                    <h4>${el.title}</h4>
+                    <small>${el.author}</small>
+                    <p>${el.description}</p>
+                    <a href="${el.url}"></a>
+                </div>
+                `
+            })
+        });
+    </script>
+</body>
+</html>

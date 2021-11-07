@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="p" title="header">hello world</p>
+    <input type="text" id="input">
+    <select name="" id="select">
+        <option value="mm">Myanmar</option>
+        <option value="us">United State</option>
+        <option value="kr">Korea</option>
+    </select>
+    <br><br>
+    <button id="btn">Click</button>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        // get 
+        // $('#btn').click(function(){
+        //     let p = $('#select').val();
+        //     console.log(p);
+        // })
+        // set======
+        $('#btn').click(function(){
+            $('#p').html('i am developer');
+        }).click(function(){
+            $('#select').val('us');
+        }).click(function(){
+            $('#p').attr('title','changing');
+        })
+        
+    </script>
+</body>
+</html>

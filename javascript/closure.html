@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouser</title>
+</head>
+<body>
+    <script>
+        function aa(){
+            console.log('aa');
+            function aaa(){
+                console.log('aaa');
+            }
+            aaa()
+        }
+        function bb(x,y){
+            let result = x + y;
+
+            function bbb(z){
+                console.log('the result is '+ result);
+            }
+            bbb(result);
+        }
+        function cc(x){
+            let answer = 'the answer is '+x;
+
+            return function(){
+                console.log(answer);
+            }
+        }
+    </script>
+</body>
+</html>

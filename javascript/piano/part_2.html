@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container{
+            width: 800px;
+            background-color: grey;
+            padding: 25px;
+            border-radius: 25px;
+        }
+        button{
+            width: 80px;
+            height: 150px;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:nth-child(even){
+            background-color: black;
+        }
+        .chord{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #record{
+            width: 100%;
+            height: 30px;
+            background-color: darkgray;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 20px;
+            border: none;
+        }
+        #save{
+            padding: 10px 20px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        #list{
+            margin-right: 5px;
+            width: 300px;
+            overflow-wrap: break-word;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul id="list">
+    </ul>
+    <div class="container">
+        <!-- <div class="box" id="record"></div> -->
+        <input type="text" id="record">
+        <div class="chord">
+            <button onclick="start('C4')"></button>
+            <button onclick="start('D4')"></button>
+            <button onclick="start('E4')"></button>
+            <button onclick="start('F4')"></button>
+            <button onclick="start('G4')"></button>
+            <button onclick="start('A4')"></button>
+            <button onclick="start('B4')"></button>
+            <button onclick="start('C5')"></button>
+        </div>
+    </div>
+    <input type="button" value="Save" id="save" onclick="save()">
+    
+    <script>
+        let record = document.getElementById('record');
+        let list = document.getElementById('list');
+        let recordMemory = [];
+
+        function start(x){
+            let music = new Audio(`sound/${x}.mp3`);
+            music.play();
+            record.value +=x + ",";
+        }
+        function save(){
+            let chord = record.value;
+            recordMemory.push(chord);
+            alert(`${chord} are saved in memory.`);
+            record.value = "";
+            list.innerHTML = "";
+            recordMemory.map(function(el,index){
+                list.innerHTML +=`<li>${el}<input type="button" value="replay" onclick="replay(${index})"></li>`
+            })
+        }
+        function replay(x){
+            let now = recordMemory[x].split(',');
+            now.pop();
+            duration(now);
+        }
+        let keys = ['C4','D4','E4','C4','C4','D4','E4','C4','E4','F4','G4','E4','F4','G4'];
+        function duration(arr,delay=1000){
+                let time = delay;
+            arr.map(function (el,index){
+                setTimeout(start,time,el);
+                time +=delay;
+            })
+        }
+        document.addEventListener('keyup',function(e){
+            console.log(e.keyCode);
+            let chords = e.keyCode;
+            switch (chords) {
+            case 65:
+                start('C4');
+                break;
+            case 83:
+                start('D4');
+            break;
+            case 68:
+                start('E4');
+            break;
+            case 70:
+                start('F4');
+            break;
+            case 74:
+                start('G4');
+            break;
+            case 75:
+                start('A4');
+            break;
+            case 76:
+                start('B4');
+            break;
+            case 186:
+                start('C5');
+            break;
+            }
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .one{
+            width: 500px;
+            padding: 0 30px;
+            animation: animateleft 2s;
+        }
+        .one img{
+            width: 100%;
+
+        }
+        .two{
+            width: 500px;
+            padding: 0 20px;
+        }
+        .two h2{
+            margin-bottom: 20px;
+            animation: animateright 1.3s;
+        }
+        .two p{
+            line-height: 1.2;
+            animation: animateright 1.8s
+        }
+        @keyframes animateleft{
+            from{
+                transform: translateX(-500px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes animateright{
+            from{
+                transform: translateX(500px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        .heart{
+            width: 40px;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            animation: heartshake .5s infinite alternate;
+        }
+        @keyframes heartshake{
+            from{
+                transform: scale(1.5);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one">
+            <img src="../img/poe-landscape-1.jpg" alt="">
+        </div>
+        <div class="two">
+            <h2>What is animation</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia facilis rerum mollitia quas perferendis amet ut veritatis quae, totam voluptas nostrum modi reiciendis neque porro doloribus repellat soluta quasi nemo?</p>
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="heart"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>
+</body>
+</html>

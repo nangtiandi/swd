@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        img{
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>developer</h1>
+    <h2 id="title">heading 2</h2>
+    <script>
+        let body = document.body;
+        let h3 = document.createElement('h3');
+        let text = document.createTextNode('hello world!');
+        let title = document.getElementById('title');
+        // body.insertBefore(h3,title);
+        body.appendChild(h3);
+
+        h3.appendChild(text);
+
+        body.insertBefore(h3,title);
+        
+    </script>
+    <!-- <img src="../img/img01.jpg" alt="">
+    <img src="../img/img01.jpg" alt="">
+    <img src="../img/img01.jpg" alt="">
+    <script>
+        document.querySelectorAll('img').forEach(function(el,index){
+            el.src = "../img/img0${index+1}.jpg";
+        });
+    </script> -->
+    <!-- <button id="click" onclick="run()">Click Here</button> -->
+    <!-- <script>
+        document.getElementById('click').onclick = function(){
+            alert('this is onclick property');
+        }
+        document.getElementById('click').addEventListener("click",function(){
+            alert('this is addeventlistener method');
+        })
+        function run(){
+            alert('this is attribute onclick method');
+        }
+    </script> -->
+</body>
+</html>

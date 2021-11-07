@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate Circle Animation</title>
+    <style>
+        .circle{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: lightseagreen;
+            border: 5px solid lightseagreen;
+            border-color: magenta rgb(127, 230, 31);
+            transform: translate(1000px,500px);
+            animation: animate 5s linear infinite;
+        }
+        @keyframes animate{
+            0%{
+                transform: translate(-200px,-450px) rotate(0deg);
+            }
+            20%{
+                transform: translate(200px,450px) rotate(360deg);
+            }
+            30%{
+                transform: translate(300px,150px) rotate(720deg);
+            }
+            45%{
+                transform: translate(400px,500px) rotate(1080deg);
+            }
+            60%{
+                transform: translate(600px,200px) rotate(1440deg);
+            }
+            80%{
+                transform: translate(700px,500px) rotate(1800deg);
+            }
+            100%{
+                transform: translate(1000px,500px) rotate(2160deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column property</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .title{
+            text-align: center;
+            padding: 20px 0;
+        }
+        .paragraph{
+            columns: 3 300px;
+            column-gap: 30px;
+            column-rule: 1px solid palevioletred;
+        }
+        .paragraph p{
+            letter-spacing: 1px;
+            line-height: 20px;
+            text-align: justify;
+            
+        }
+        .full{
+            column-span: all;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 1024px){
+            .full{
+                margin: 0 auto;
+            }
+            .paragraph p{
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 class="title">Gird Column</h2>
+    <div class="paragraph">
+        <p class="full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.</p>
+        <p class="full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odit, dignissimos eligendi, rerum consequuntur qui inventore saepe incidunt error, recusandae iste sequi in. Eveniet quae, ratione animi harum sequi quidem.</p>
+    </div>
+</body>
+</html>

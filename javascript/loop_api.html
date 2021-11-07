@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop API</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+        width: 100%;
+    }
+    tr,td{
+        width: 100px;
+        border: 1px solid black;
+        text-align: center;
+    }
+</style>
+<body>
+    <table>
+        <thead>
+            <th colspan="2">Central Bank Of Myanmar</th>
+        </thead>
+        <th>Region Currency</th>
+        <th>Myanmar Currency</th>
+        <tbody id="tbody">
+            
+        </tbody>
+        
+    </table>
+    <script src="js/exchange_rate.js"></script>
+    <script>
+        console.log(data);
+        let rates = data.rates;
+        let tbody = document.querySelector("#tbody");
+        // for(x in rates){
+        //     tbody.innerHTML += `
+        //     <tr>
+        //         <td>${x}</td>
+        //         <td>${rates[x]}</td>
+        //     </tr>
+        //     `;
+        // }
+        rates.map(function(el,index){
+            tbody.innerHTML += `
+            <tr>
+                <td>${index}</td>
+                <td></td>
+            </tr>
+            `
+        })
+    </script>
+</body>
+</html>

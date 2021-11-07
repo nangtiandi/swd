@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list 1</title>
+</head>
+<body>
+    <input type="text" id="userInput">
+    <br>
+    <ul id="list">
+
+    </ul>
+
+    <script>
+        let userInput = document.getElementById('userInput');
+        let list = document.getElementById('list');
+        let id = 1;
+
+        if(localStorage.length>0){
+            id = localStorage.length++;
+        }
+
+        function save(x){
+            localStorage.setItem(id,x);
+            id++;
+        }
+
+        function enter(x){
+            let li = document.createElement('li');
+            let text = document.createTextNode(x);
+            list.appendChild(li);
+            li.appendChild(text);
+            userInput.value = "";
+        }
+        function showList(){
+            for(let i=1; i<=localStorage.length; i++){
+                enter(localStorage.getItem(i));
+            }
+        }
+        document.addEventListener('keyup',function(event){
+            if(event.keyCode == 13){
+                let input = userInput.value;
+                enter(input);
+                save(input);
+                console.log(input)
+            }
+        })
+        showList();
+    </script>
+</body>
+</html>

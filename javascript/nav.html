@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Mobile Responsive</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            font-size: 18px;
+        }
+        a:hover{
+            color: rgb(220, 20, 60);
+        }
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: cyan;
+            padding: 10px ;
+        }
+        .brand{
+            padding-left: 30px;
+        }
+        .brand-logo{
+            color: brown;
+        }
+        .menu{
+            display: none;
+        }
+        .navbar{
+            padding-right: 20px;
+        }
+        .nav-list{
+            list-style: none;
+            padding: 0;
+        }
+        .nav-item{
+            display: inline-block;
+        }
+        .nav-link{
+            color: brown;
+            margin: 0 10px;
+        }
+        @media screen and (max-width: 600px){
+            header{
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            .menu{
+                display: block;
+                margin-right: 20px;
+                background: #fff;
+                border: none;
+                padding: 5px;
+            }
+            .navbar{
+                margin-top: 10px;
+                display: none;
+                width: 100%;
+                background-color: cyan;
+                text-align: center;
+            }
+            .nav-item{
+                display: block;
+                padding: 10px 0;
+            }
+            .nav-link{
+                padding-top: 10px;
+            }
+            
+        }
+        .show-menu{
+                display: block;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <a href="" class="brand-logo">Brand Name</a>
+        </div>
+        <button class="menu" onclick="menuToggle()">Click</button>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        let navbar = document.querySelector(".navbar");
+        function menuToggle(){
+            navbar.classList.toggle("show-menu");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API</title>
+</head>
+<body>
+    <!-- <figure>
+        <figcaption>Listen to the T-Rex:</figcaption>
+        <audio
+            controls
+            src="music/田一龙 - 一定要爱你-1.mp3">
+                Your browser does not support the
+                <code>audio</code> element.
+        </audio>
+    </figure> -->
+    <input type="file" id="file" multiple>
+    <ul id="list">
+        
+    </ul>
+    <script>
+        // let audio = new Audio('music/田一龙 - 一定要爱你-1.mp3');
+        document.getElementById("file").addEventListener('change',function(){
+            let upload = this.files;
+            console.log(upload);
+            for(x of upload){
+                document.getElementById('list').innerHTML += `
+                <li>${x.name}</li>
+                <li>${x.lastModifiedDate}</li>
+                `;
+            }
+        })
+    </script>
+</body>
+</html>

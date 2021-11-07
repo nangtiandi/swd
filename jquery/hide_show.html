@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide Toggle</title>
+    <style>
+        .container{
+            width: 250px;
+            height: 100px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <button class="show">Show</button>
+    <button class="hide">hide</button>
+    <button class="toggle">toggle</button>
+    <br><br>
+    <div class="container">
+
+    </div>
+    
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $('.hide').click(function(){
+            $('.container').hide(1000);
+        })
+        $('.show').click(function(){
+            $('.container').show(1000);
+        });
+        $('.toggle').click(function(){
+            $('.container').toggle(1000);
+        })
+    </script>
+</body>
+</html>

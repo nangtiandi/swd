@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Column</title>
+    <style>
+        .gallery{
+            columns: 3 300px;
+            width: 90%;
+            margin: auto;
+            
+        }
+        .gallery img{
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 15px;
+            transition: .5s;
+        }
+        .gallery img:hover{
+            filter: contrast(150%);
+        }
+        @media screen and (max-width: 1024px){
+            .gallery{
+                width: 90%;
+            }
+        }
+        @media screen and (max-width: 768px){
+            .gallery{
+                columns: 2 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 class="title">My Gallery</h2>
+    <div class="gallery">
+        <img src="../img/poe-portrait-2.jpg" alt="">
+        <img src="../img/poe-portrait-3.jpg" alt="">
+        <img src="../img/poe-portrait-4.jpg" alt="">
+        <img src="../img/poe-portrait-5.jpg" alt="">
+        <img src="../img/poe-landscape-1.jpg" alt="">
+        <img src="../img/poe-landscape-2.jpg" alt="">
+        <img src="../img/poe-landscape-3.jpg" alt="">
+        <img src="../img/poe-landscape-4.jpg" alt="">
+        <img src="../img/poe-landscape-6.jpg" alt="">
+        <img src="../img/poe-portrait-1.jpg" alt="">
+    </div>
+</body>
+</html>

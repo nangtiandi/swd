@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Box</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .bg-grey{
+            background-color: grey;
+        }
+        .bg-blue{
+            background-color: indianred;
+        }
+        .part-one{
+            display: flex;
+            min-height: 50vh;
+        }
+        .item{
+            flex-grow: 1;
+        }
+        .item.right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item .text-box{
+            width: 350px;
+        }
+        .part-two{
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: -80px;
+
+        }
+        .item-two{
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 5px #ccc;
+            padding: 20px 10px;
+            background-color: ivory;
+        }
+        .three{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            margin: 40px auto;
+        }
+        .part-three{
+            width: 800px;
+            text-align: center;
+        }
+        .four{
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgoldenrodyellow;
+        }
+        .img-four{
+            width: 400px;
+        }
+        .part-four{
+            width: 400px;
+            padding: 0 50px;
+        }
+        .five{
+            background-color: lightgray;
+            flex-direction: row-reverse;
+        }
+        @media screen and (max-width: 600px){
+            .part-one,.part-two,.three,.four,.five{
+                flex-direction: column;
+            }
+            .part-two{
+                align-items: center;
+            }
+            section,div{
+                max-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="part-one">
+        <div class="item left bg-grey"></div>
+        <div class="item right bg-blue">
+            <div class="text-box">
+                <h2>What is flex box?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, nisi suscipit iste voluptatum atque commodi ipsa, quae dolorem magnam quam necessitatibus excepturi impedit eius quos perferendis! Consectetur, distinctio! Excepturi, in.</p>
+            </div>
+        </div>
+    </section>
+    <section class="part-two">
+        <div class="item-two">
+            <h3>This is part one
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cumque, magni nobis numquam natus commodi assumenda, accusantium nam sed inventore deserunt reiciendis quasi eius dignissimos necessitatibus quae officia, ducimus recusandae!</p>
+            </h3>
+        </div>
+        <div class="item-two">
+            <h3>This is part one
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cumque, magni nobis numquam natus commodi assumenda, accusantium nam sed inventore deserunt reiciendis quasi eius dignissimos necessitatibus quae officia, ducimus recusandae!</p>
+            </h3>
+        </div>
+        <div class="item-two">
+            <h3>This is part one
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cumque, magni nobis numquam natus commodi assumenda, accusantium nam sed inventore deserunt reiciendis quasi eius dignissimos necessitatibus quae officia, ducimus recusandae!</p>
+            </h3>
+        </div>
+    </section>
+    <section class="three">
+        <div class="part-three">
+            <h2>What do you want to do?</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius illo quis necessitatibus alias maxime soluta laborum tempore ea repudiandae suscipit. Velit consequatur rem sed laudantium aliquid architecto, optio aliquam perspiciatis.</p>
+        </div>
+    </section>
+    <section class="four">
+        <img src="../img/img03.jpg" alt="" class="img-four">
+            <div class="part-four">
+                <h2>Welcome to Grace!</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis dicta, voluptas rerum quaerat ipsum corrupti harum totam tempore voluptatem. Explicabo facere nam molestiae placeat laboriosam deserunt a hic ab sit?</p>
+            </div>
+        </img>
+    </section>
+    <section class="four five">
+        <img src="../img/img04.jpg" alt="" class="img-four">
+            <div class="part-four part-five">
+                <h2>Welcome to Grace!</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis dicta, voluptas rerum quaerat ipsum corrupti harum totam tempore voluptatem. Explicabo facere nam molestiae placeat laboriosam deserunt a hic ab sit?</p>
+            </div>
+        </img>
+    </section>
+</body>
+</html>

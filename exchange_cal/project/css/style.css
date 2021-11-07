@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+:root{
+    --primary: #2cD1EE;
+    --secondary: #707070;
+    --text : #fff;
+    --dark : #000;
+}
+.container{
+    background-color: rgba(105, 105, 105, 0.5);
+    width: 60%;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo-pic{
+    width: 40px;
+}
+.logo-name{
+    margin-left: 15px;
+    font-size: 20px;
+}
+.result{
+    font-weight: bolder;
+    font-size: 20px;
+}
+.hr-line{
+    background-color: dimgray;
+    height: 3px;
+    margin: 10px auto;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    width: 150px;
+}
+.box label{
+    display: block;
+    margin: 10px;
+}
+.box input,
+.box select{
+    border: none;
+    width: 100%;
+    padding: 5px 5px;
+    outline: none;
+    color: var(--secondary);
+}
+input{
+    text-align: center;
+}
+.cal-btn{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 19px;
+    color: var(--secondary);
+}
+.cal-btn:focus{
+    background-color: #999;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+.recordTable{
+    width: 100%;
+    padding: 10px;
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+thead{
+    background-color: dodgerblue;
+}
+tbody tr,td{
+    text-align: center;
+    border: 1px solid dodgerblue;
+}
+tr:nth-child(even){
+    background-color: rgb(126, 180, 235);
+}
+#empty{
+    text-align: center;
+}
+.change-mode{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--dark);
+    color: var(--text);
+}
+@media screen and (max-width: 480px){
+    .container{
+        width: 90%;
+    }
+    .header{
+        flex-flow: column;
+        align-items: flex-end;
+    }
+    .logo{
+        width: 100%;
+    }
+    .content{
+        flex-wrap: wrap;
+    }
+    .box{
+        width: 100%;
+    }
+    .from-box,.to-box{
+        width: 48%;
+        margin-bottom: 15px;
+    }
+    .box input,
+    .box select,
+    .cal-btn{
+        padding: 13px;
+    }
+}
