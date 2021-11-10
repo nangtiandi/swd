@@ -1,0 +1,18 @@
+.one {
+  width: 500px;
+  height: 300px;
+  background-color: #222;
+  border: 2px solid red;
+  -webkit-box-shadow: 0 0 15px 5px #888;
+          box-shadow: 0 0 15px 5px #888;
+  margin: 100px 50px;
+}
+
+.two h2 {
+  color: blue;
+}
+
+.two .para {
+  background-color: #222;
+}
+/*# sourceMappingURL=style.css.map */

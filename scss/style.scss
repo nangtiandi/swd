@@ -1,0 +1,23 @@
+$primaryColor: blue;
+$dark: #222;
+$gray: #888;
+
+@mixin important-text($x,$y) {
+    border: 2px solid red;
+    box-shadow: 0 0 15px 5px $gray;
+    margin: $x $y;
+}
+.one{
+    width: 500px;
+    height: 300px;
+    background-color: $dark;;
+    @include important-text(100px,50px);
+}
+.two{
+    h2{
+        color: $primaryColor;
+    }
+    .para{
+        background-color: $dark;
+    }
+}
