@@ -1,0 +1,14 @@
+section{
+    min-height: 100vh;
+    position: relative;
+}
+section h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 700;
+}
+section:nth-child(even){
+    background-color: aqua;
+    color: azure;
+}

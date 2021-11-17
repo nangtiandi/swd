@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+    <!-- loader website -->
+    <div class="loading">
+        <div class="loader"></div>
+    </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Website</title>
+    <style>
+        .loading{
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(141, 168, 255);
+            z-index: 21000;
+        }
+        .loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: rgb(50, 230, 176);
+  background: -moz-linear-gradient(left, rgb(50, 230, 176) 10%, rgba(255, 255, 255, 0) 42%);
+  background: -webkit-linear-gradient(left, rgb(50, 230, 176) 10%, rgba(255, 255, 255, 0) 42%);
+  background: -o-linear-gradient(left, rgb(50, 230, 176) 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(left, rgb(50, 230, 176) 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, rgb(50, 230, 176) 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: rgb(255, 0, 234);
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  background: #0dc5c1;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+    </style>
+
+    <link rel="icon" href="../_data/logo-small.png">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <!-- slick slider  -->
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <!-- main css -->
+    <!-- animate link -->
+    <link rel="stylesheet" href="vendor/animate_it/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- ===== navbar section code ==== -->
+    <header class="container-fluid header-nav animate__animated animate__backInDown">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                            <a class="navbar-brand" href="#home">
+                                <img src="../_data/logo-long.svg" alt="" class="brand-logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                          
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                              <ul class="navbar-nav">
+                                <li class="nav-item">
+                                  <a class="nav-link text-uppercase" href="#home">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text-uppercase" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#services">Services</a>
+                                  </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text-uppercase" href="#pricing">Pricing</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#contact">Contact</a>
+                                  </li>
+                              </ul>
+                            </div>
+                          </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- home section code  -->
+    <section class="container-fluid" id="home">
+        <div class="row">
+            <div class="container">
+                <div class="row min-vh-100 align-items-center flex-column-reverse flex-md-row">
+                    <div class="col-6 col-md-6">
+                        <div class="my-3 text-center text-md-left animate__animated animate__backInLeft">
+                            <p class="h4 text-uppercase">Social Media</p>
+                            <p class="h1 text-uppercase">For Business</p>
+                            <p class="text-uppercase text-black-50">perfomance based social media agency <br>
+                            We are hiring you</p>
+                            <a href="" class="btn btn-primary text-uppercase">Get a free paid</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <div class="my-3">
+                            <img src="../_data/content-1.svg" alt="" class="w-100 animate__animated animate__rotateInUpRight">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mouse-button">
+            <a href="#home" class="animate__animated animate__bounceInDown"><i class="fas fa-arrow-alt-circle-up"></i></a>
+        </div>
+    </section>
+    <!-- === about section === -->
+    <section class="container min-vh-100" id="about">
+        <div class="row align-items-center my-3">
+            <div class="col-12 col-md-6">
+                <div class="my-3 animate__animated animate__lightSpeedInLeft wow">
+                    <img src="../_data/content-2.svg" alt="" class="w-100">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 about-content">
+                <div class="text-center text-md-left animate__lightSpeedInRight wow">
+                    <p class="text-uppercase">Biography</p>
+                    <p class="h1 text-uppercase">About Me</p>
+                    <p class="text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, sunt nobis quo autem repudiandae molestias quidem! Vel dolores aspernatur deleniti minus, nisi accusamus rerum voluptatum quae natus consequuntur expedita nihil.</p>
+                    <p>It's 2021 time to sink.</p>
+                    <a href="" class="btn btn-primary">See More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==== services section code ==== -->
+    <section class="container-fluid bg-dark" id="services">
+        <div class="row min-vh-100 my-3">
+            <div class="container">
+                <div class="text-center my-3">
+                    <p class="h3 text-primary text-uppercase">Our Services</p>
+                    <p class="h4 text-white">What we make amazing!</p>
+                </div>
+                <div class="row my-3 js pl-4" id="slider">
+                    <div class="col-12 col-md-4">
+                        <div class="card services-card shadow animate__animated animate__bounceInDown wow animate-time-1 my-2">
+                            <a href="">
+                                <img src="img/show.gif" class="card-img-top img-thumbnail img-fluid" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <p class="h4">Recent My Project</p>
+                                <p class="card-text text-black-50">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="text-right">
+                                    <a href="" class="btn btn-primary">See More</a>
+                                </div>
+                                
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card services-card shadow animate__animated animate__bounceInDown wow animate-time-2 my-2">
+                            <a href="">
+                                <img src="img/173455.gif" class="card-img-top img-thumbnail img-fluid" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <p class="h4">Recent My Project</p>
+                                <p class="card-text text-black-50">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="text-right">
+                                    <a href="" class="btn btn-primary">See More</a>
+                                </div>
+                                
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card services-card shadow animate__animated animate__bounceInDown wow animate-time-3 my-2">
+                            <a href="">
+                                <img src="img/show2.gif" class="card-img-top img-thumbnail img-fluid" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <p class="h4">Recent My Project</p>
+                                <p class="card-text text-black-50">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="text-right">
+                                    <a href="" class="btn btn-primary">See More</a>
+                                </div>
+                                
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card services-card shadow animate__animated animate__bounceInDown wow animate-time my-2">
+                            <a href="">
+                                <img src="img/edm1.jpg" class="card-img-top img-thumbnail img-fluid" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <p class="h4">Recent My Project</p>
+                                <p class="card-text text-black-50">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="text-right">
+                                    <a href="" class="btn btn-primary">See More</a>
+                                </div>
+                                
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card services-card shadow animate__animated animate__bounceInDown wow animate-time my-2">
+                            <a href="">
+                                <img src="img/doggy.gif" class="card-img-top img-thumbnail img-fluid" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <p class="h4">Recent My Project</p>
+                                <p class="card-text text-black-50">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="text-right">
+                                    <a href="" class="btn btn-primary">See More</a>
+                                </div>
+                                
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card services-card shadow animate__animated animate__bounceInDown wow animate-time my-2">
+                            <a href="">
+                                <img src="img/edm2.jpg" class="card-img-top img-thumbnail img-fluid" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <p class="h4">Recent My Project</p>
+                                <p class="card-text text-black-50">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="text-right">
+                                    <a href="" class="btn btn-primary">See More</a>
+                                </div>
+                                
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card services-card shadow animate__animated animate__bounceInDown wow animate-time my-2">
+                            <a href="">
+                                <img src="img/edm3.jpg" class="card-img-top img-thumbnail img-fluid" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <p class="h4">Recent My Project</p>
+                                <p class="card-text text-black-50">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="text-right">
+                                    <a href="" class="btn btn-primary">See More</a>
+                                </div>
+                                
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card services-card shadow animate__animated animate__bounceInDown wow animate-time my-2">
+                            <a href="">
+                                <img src="img/edm4.png" class="card-img-top img-thumbnail img-fluid" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <p class="h4">Recent My Project</p>
+                                <p class="card-text text-black-50">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="text-right">
+                                    <a href="" class="btn btn-primary">See More</a>
+                                </div>
+                                
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card services-card shadow animate__animated animate__bounceInDown wow animate-time my-2">
+                            <a href="">
+                                <img src="img/edm1.jpg" class="card-img-top img-thumbnail img-fluid" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <p class="h4">Recent My Project</p>
+                                <p class="card-text text-black-50">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="text-right">
+                                    <a href="" class="btn btn-primary">See More</a>
+                                </div>
+                                
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======== pricing section code ======= -->
+    <section class="container min-vh-100" id="pricing">
+        <div class="text-center my-3">
+            <p class="h3 text-primary text-uppercase">Pricing Rates</p>
+            <p>လူကြီးမင်းတို့၏ လုပ်ငန်းတိုးချဲ့အောင်မြင်းရေးအတွက် <strong><a href="">Bay Bok</a></strong> ထံတွင် website များလာရောက်အပ်နှံလိုက်ပါ</p>
+        </div>
+        <div class="row my-3 align-items-center">
+            <div class="col-12 col-md-4 my-2">
+                <div class="card services-card animate__animated animate__swing wow animate-time-1 shadow my-2">
+                    <div class="card-body">
+                        <p class="h4 text-primary p-3">E-commerce Website</p>
+                        <h3 class="display-5 text-primary font-weight-bolder my-2">$ 200</h3>
+                        <ul class="list-unstyled">
+                            <li class="text-black-50"><i class="fas fa-home"></i> Admin Dashboard</li>
+                            <li class="text-black-50">Free Services</li>
+                            <li class="text-black-50">30% discount change template</li>
+                            <li class="text-black-50">Using Easy</li>
+                        </ul>
+                        <a href="" class="btn btn-outline-primary my-3">See details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 my-2">
+                <div class="card services-card animate__animated animate__swing wow animate-time-1 shadow my-2" style="height: 400px;">
+                    <div class="card-body text-center">
+                        <p class="h4 text-primary p-3">E-commerce Website</p>
+                        <h3 class="display-5 text-primary font-weight-bolder my-2">$ 400</h3>
+                        <ul class="list-unstyled">
+                            <li class="text-black-50"><i class="fas fa-home"></i> Admin Dashboard</li>
+                            <li class="text-black-50">Free Services</li>
+                            <li class="text-black-50">30% discount change template</li>
+                            <li class="text-black-50">Using Easy</li>
+                            <li class="text-black-50">တခုခုကွာ</li>
+                            <li class="text-black-50">တခုခုကွာ</li>
+                            <li class="text-black-50">တခုခုကွာ</li>
+                        </ul>
+                        <a href="" class="btn btn-outline-primary my-3">See details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 my-2">
+                <div class="card services-card animate__animated animate__swing wow animate-time-1 shadow my-2">
+                    <div class="card-body">
+                        <p class="h4 text-primary p-3">E-commerce Website</p>
+                        <h3 class="display-5 text-primary font-weight-bolder my-2">$ 180</h3>
+                        <ul class="list-unstyled">
+                            <li class="text-black-50"><i class="fas fa-home"></i> Admin Dashboard</li>
+                            <li class="text-black-50">Free Services</li>
+                            <li class="text-black-50">30% discount change template</li>
+                            <li class="text-black-50">Using Easy</li>
+                        </ul>
+                        <a href="" class="btn btn-outline-primary my-3">See details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== contact section code ====== -->
+    <section class="container-fluid" id="contact">
+        <div class="row min-vh-100">
+            <div class="container">
+                <div class="text-center my-3">
+                    <p class="h3 text-primary text-uppercase">Contact Us</p>
+                    <p class="text-uppercase text-black-50">Get touch Contact Us</p>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-3">
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="" id="" rows="5" class="form-control" placeholder="Something write here..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary" value="Conact Us">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 col-md-6 mt-3">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.537605590069!2d96.17595931421198!3d16.79966532391191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ecc1738148e9%3A0x9487094c36ec09ab!2z4YCe4YCu4YCQ4YCs4YCc4YCZ4YC64YC4LCDhgJvhgJThgLrhgIDhgK_hgJThgLosIOGAmeGAvOGAlOGAuuGAmeGArA!5e0!3m2!1smy!2s!4v1636716367331!5m2!1smy!2s" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid" id="footer">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="text-left mt-5 pt-5">
+                            <p class="h4 text-uppercase text-primary">Social Media</p>
+                            <p class="text-black-50">Our Social media contact</p>
+                            <div class="social-icon">
+                                <a href="">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="d-flex justify-content-center align-items-cente">
+                            <img src="img/app-store.png" alt="" class="app">
+                            <img src="img/playstore.png" alt="" class="app">
+                            <!-- <p>Quick link us</p>
+                            <ul class="list-unstyled">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">About</a></li>
+                                <li><a href="">Pricing</a></li>
+                                <li><a href="">Location</a></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="mt-4 pt-4 text-right">
+                            <p class="h4 text-primary">Our Services</p>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                <span> +959 403 179 169</span>
+                            </p>
+                            <p>
+                                <i class="far fa-envelope"></i>
+                                <span>nangdi00@gmail.com</span>
+                            </p>
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span> Yangon, Myanmar</span>
+                            </p>
+                            <p>
+                                <span class="font-weight-bolder">Open time </span>
+                                <span> 9:00 AM - 5:30 PM</span>
+                            </p>
+                            <p>
+                                <span class="font-weight-bolder">Close time </span>
+                                <span> 9:00 AM - 5:30 PM</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="vendor/slick/slick.min.js"></script>
+    <script src="js/vanilla-tilt.babel.min.js"></script>
+    <script src="vendor/wow/wow.js"></script>
+    <script src="vendor/way_point/jquery.waypoints.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>

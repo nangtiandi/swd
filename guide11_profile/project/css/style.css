@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header-nav{
+    position: absolute;
+    top: 0;
+    z-index: 10000;
+}
+.header-nav-scroll{
+    position: fixed;
+    transition: .5s;
+    background-color: rgb(169, 171, 250);
+}
+.brand-logo{
+    width: 150px;
+}
+#home{
+    position: relative;
+    background-image: url(../../_data/Bg-Shape.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 50%;
+}
+.animate-time-1{
+    animation-delay: .8s;
+}
+.animate-time-2{
+    animation-delay: 1s;
+}
+.animate-time-3{
+    animation-delay: 1.3s;
+}
+.mouse-button{
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 50px;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px #ccc;
+    background: #1A129f;
+    cursor: pointer;
+    animation: animate linear 1s infinite alternate;
+    z-index: 20000;
+}
+@keyframes animate{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+.mouse-button i{
+    font-size: 19px;
+    color: #fff;
+}
+.about-content{
+    background-image: url(../../_data/bg-2.svg);
+    background-size: 100%;
+}
+#services{
+    background-image: url(../../_data/bg-3.svg);
+    background-size: 100%;
+}
+.services-card{
+    border: none;
+    border-radius: 15px;
+    /* transition: .5s; */
+}
+/* .services-card:hover{
+    transform: scale(0.97);
+} */
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slick-dots li{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    border: 2px solid #1A129f;
+}
+.slick-dots li.slick-active{
+    width: 15px !important;
+    height: 15px !important;
+    background-color: #1A129f !important;
+}
+#footer{
+    background: rgb(198, 204, 203);
+    min-height: 50vh;
+}
+.social-icon a{
+    padding: 0 8px;
+    font-size: 24px;
+}
+.app{
+    width: 100%;
+}
